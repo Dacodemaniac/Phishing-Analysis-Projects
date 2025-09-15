@@ -1,11 +1,13 @@
 # 📧 Project Title – [Short Description]
 
 ## 📌 Overview
-Provide a short summary of this phishing campaign.  
-Example:
-- Date or context of when you discovered it
-- Type of attack (e.g., credential harvesting, malware delivery, BEC scam)
-- Target audience (if known)
+This email was obtained from the Phishing_Pot Repository on Github (sample 1005).
+
+The attacker who impersonated Binance, used phishing as the attack vector to attempt credential harvesting from different users, claiming their PII has been leaked and needed to be updated, after which they get compensated with bitcoin from the crypto company.
+
+This phishing campaign began Sun, 23 Jul 2023 07:04:11 +0300.
+
+
 
 ---
 
@@ -26,7 +28,12 @@ Example:
 ## 🛠️ Thought Process
 Explain **how you approached the analysis** step by step, and why.  
 Example:
-- **Step 1:** Collected raw email & inspected headers because I wanted to verify the sender IP.
+- **Step 1:** I opened the email with outlook as the MUA and checked the body of the email. I did this to get the context of the whole attack and also know how to begin my investigation. It was obvious at first glance that the email is indeed a malicious one since the attacker who masqueraded as Mary (an employee at att.net)  was the sender on behalf of Binance. This seemed suspicious.
+  
+    There was also a sense of urgency to get the users to Update their leaked PII and get compensated with bitcoin when done. Urgency is one of the social engineering techniques used by threat actors.
+
+  I also checked for attachments but found  none, only to notice the entire image was embedded as the link to the malicious     domain when hovered over. This also seemed like a red flag as unsuspecting users could easily fall for this trick thinking it  was a normal image.
+- 
 - **Step 2:** Checked SPF/DKIM/DMARC results to see if the email passed authentication.
 - **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
