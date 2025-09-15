@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="to-hack-7109362_640.png" alt="Phishing Analysis Banner" width="80%">
+  <img src="Images/Phishing_banner.png" alt="Phishing Analysis Banner" width="80%">
 </p>
 
 <h1 align="center">🎣 Phishing Analysis Projects</h1>
