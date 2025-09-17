@@ -29,12 +29,24 @@ This phishing campaign began Sun, 23 Jul 2023 07:04:11 +0300.
 Explain **how you approached the analysis** step by step, and why.  
 Example:
 - **Step 1:** I opened the email with outlook as the MUA and checked the body of the email. I did this to get the context of the whole attack and also know how to begin my investigation. It was obvious at first glance that the email is indeed a malicious one since the attacker who masqueraded as Mary (an employee at att.net)  was the sender on behalf of Binance. This seemed suspicious.
+  <p align="center">
+  <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
   
     There was also a sense of urgency to get the users to Update their leaked PII and get compensated with bitcoin when done. Urgency is one of the social engineering techniques used by threat actors.
+  
+<p align="center">
+  <img src="./Images/Phishing sample 2.jpg" alt="Email Header Screenshot" width="80%">
+</p>
 
   I also checked for attachments but found  none, only to notice the entire image was embedded as the link to the malicious     domain when hovered over. This also seemed like a red flag as unsuspecting users could easily fall for this trick thinking it  was a normal image.
-- 
-- **Step 2:** Checked SPF/DKIM/DMARC results to see if the email passed authentication.
+
+  
+- **Step 2:** I then proceeded to obtain the raw email and trace the origin of the email and the routes taken before it got to the recepient.
+   <p align="center">
+  <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  The origin of the email shown to have originated from Russi
 - **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
 - **Step 5:** Documented findings and compared with known phishing techniques.
@@ -49,7 +61,7 @@ Present your actual findings here:
 - Explain what you observed in each step.
 
 <p align="center">
-  <img src="./images/header-screenshot.png" alt="Email Header Screenshot" width="80%">
+  <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
 </p>
 
 ---
