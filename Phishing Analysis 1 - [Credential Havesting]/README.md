@@ -66,7 +66,12 @@ Example:
    <p align="center">
   <img src="./Images/Phishing sample 22.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-- **Step 3:** Even if the IPs and the domain appeared clean, it still doesn't make the email a legit one. Next thing I did was to look at the Authenticated-Results header for email authentication protocols like SPF, DKIM, and DMARC.
+- **Step 3:** Even if the IPs and the domain appeared clean, it still doesn't make the email a legit one. The next thing i did was compare the Reply-To, From, and Return-Path headers to see if they match, and surprisingly they did match.
+ 
+   This still doesn't prove the email is a legit one as previous signs have indicated the email address was indeed spoofed, but to confirm this I had to look at the Authenticated-Results header for email authentication protocols like SPF, DKIM, and DMARC.
+  <p align="center">
+  <img src="./Images/Phishing sample 17.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
 - **Step 5:** Documented findings and compared with known phishing techniques.
 
