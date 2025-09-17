@@ -77,11 +77,46 @@ Example:
   </p>
  
    This still doesn't prove the email is a legit one as previous signs have indicated the email address was indeed spoofed, but to confirm this I had to look at the Authenticated-Results header for email authentication protocols like SPF, DKIM, and DMARC.
+
+The Authentication-Results showed SPF was absent in the DNS record of att[.]net, which meant we wouldn't be able to confirm if the server that sent the mail was an authorized sending server or not. DkIM showed Ignore which meant the receiving server didn't trust the Public key used by the domain ( heritagejewelryandloan[.]com ) for encryption, so it ignored the DKIM check altogether. Finally, DMARC also showed none which meant the domain (att[.]net ) didn't have a DMARC policy set up in their DNS record. 
+ <p align="center">
+  <img src="./Images/Phishing sample 5.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+Normally, This email ought to go straight into the recepient's inbox due to absence of DMARC policy but the email security solution does its own DMARC alignment check and flagged the email as suspicious.
   <p align="center">
   <img src="./Images/Phishing sample 17.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-- **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
-- **Step 5:** Documented findings and compared with known phishing techniques.
+- **Step 4:** Finally since there are no attachments, I got the encoded body data of the email and decoded it using Cyberchef. It happened to be a PNG imaged encoded in base 64 and embedded as the link. This one really took me a while to figure out and my best guess is the attacker did this to bypass filters.
+ <p align="center">
+  <img src="./Images/Phishing sample 19.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+   <p align="center">
+  <img src="./Images/Phishing sample 9.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+
+- **Step 5:** To be sure the file was truly a harmless PNG file, I performed static analysis on the file and also checked if the file had an alternate data stream the attacker could have hidden malicious scripts in.
+  <p align="center">
+  <img src="./Images/Phishing sample 10.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+ <p align="center">
+  <img src="./Images/Phishing sample 11.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  <p align="center">
+  <img src="./Images/Phishing sample 12.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  <p align="center">
+  <img src="./Images/Phishing sample 13.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  <p align="center">
+  <img src="./Images/Phishing sample 14.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  <p align="center">
+  <img src="./Images/Phishing sample 15.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+   <p align="center">
+  <img src="./Images/Phishing sample 16.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+- 
 
 You can also embed small screenshots inline with explanations.
 
