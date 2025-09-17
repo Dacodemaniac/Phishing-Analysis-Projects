@@ -57,7 +57,15 @@ Example:
    <p align="center">
   <img src="./Images/Phishing sample 20.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-  
+  I decided to check both IPs on VirusTotal and shockingly both came out as clean. 
+   </p>
+   <p align="center">
+  <img src="./Images/Phishing sample 21.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+   </p>
+   <p align="center">
+  <img src="./Images/Phishing sample 22.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
 - **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
 - **Step 5:** Documented findings and compared with known phishing techniques.
