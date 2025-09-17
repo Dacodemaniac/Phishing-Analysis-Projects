@@ -43,10 +43,18 @@ Example:
 
   
 - **Step 2:** I then proceeded to obtain the raw email and trace the origin of the email and the routes taken before it got to the recepient.
+  
    <p align="center">
-  <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
+  <img src="./Images/Phishing sample 3.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-  The origin of the email shown to have originated from Russi
+  The email shown to have originated from a city in Russia
+    <p align="center">
+  <img src="./Images/Phishing sample 18.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  <p align="center">
+  <img src="./Images/Phishing sample 6.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  
 - **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
 - **Step 5:** Documented findings and compared with known phishing techniques.
