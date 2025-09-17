@@ -116,7 +116,7 @@ Normally, This email ought to go straight into the recepient's inbox due to abse
    <p align="center">
   <img src="./Images/Phishing sample 16.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-- 
+ Although, a vendor flagged the file as malicious in VirusTotal, this because it is associated with the phishing campaign. My static analysis showed this file is truly a PNG file without any malicious capability or alternate data stream.
 
 You can also embed small screenshots inline with explanations.
 
