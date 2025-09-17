@@ -66,7 +66,7 @@ Example:
    <p align="center">
   <img src="./Images/Phishing sample 22.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-- **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
+- **Step 3:** Even if the IPs and the domain appeared clean, it still doesn't make the email a legit one. Next thing I did was to look at the Authenticated-Results header for email authentication protocols like SPF, DKIM, and DMARC.
 - **Step 4:** Opened URL in a safe sandbox and captured network traffic for IOC extraction.
 - **Step 5:** Documented findings and compared with known phishing techniques.
 
