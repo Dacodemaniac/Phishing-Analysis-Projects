@@ -47,12 +47,15 @@ Example:
    <p align="center">
   <img src="./Images/Phishing sample 3.jpg" alt="Email Header Screenshot" width="80%">
   </p>
-  The email shown to have originated from a city in Russia
+  The email shown to have originated from a city in Russia while the server involved in this phsihing campaign was from USA.
     <p align="center">
   <img src="./Images/Phishing sample 18.jpg" alt="Email Header Screenshot" width="80%">
   </p>
   <p align="center">
   <img src="./Images/Phishing sample 6.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+   <p align="center">
+  <img src="./Images/Phishing sample 20.jpg" alt="Email Header Screenshot" width="80%">
   </p>
   
 - **Step 3:** Investigated links and decoded any base64 data to reveal the redirect path.
