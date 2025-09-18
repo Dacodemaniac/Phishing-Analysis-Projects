@@ -1,6 +1,6 @@
 # Phishing Analysis 1 – Credential Harvesting
 
-## 📌 Overview
+##  Overview
 This email was obtained from the **Phishing_Pot** repository on GitHub (sample `1005`).  
 
 The attacker, impersonating **Binance**, used a phishing campaign with the goal of **credential harvesting**.  
@@ -10,7 +10,7 @@ This campaign began **Sun, 23 Jul 2023 07:04:11 +0300**.
 
 ---
 
-## 🧠 Thought Process  
+##  Thought Process  
 
 ### **Step 1 – Initial Review**
 I opened the email with **Outlook** as the MUA and reviewed the body to understand the context.  
@@ -103,7 +103,7 @@ VirusTotal flagged it as malicious **only because it was tied to this phishing c
 
 ---
 
-## 📧 Email Details
+## Email Details
 
 | Field           | Value |
 |----------------|-------|
@@ -130,7 +130,7 @@ VirusTotal flagged it as malicious **only because it was tied to this phishing c
 
 ---
 
-## 🛡️ Mitigation & Recommendations
+## Mitigation & Recommendations
 - Configure and enforce **SPF**, **DKIM**, and **DMARC** on organizational domains  
 - Block the **sender domain** and **source IPs** at the email gateway  
 - Add malicious URLs to the **web proxy blocklist**  
@@ -138,7 +138,7 @@ VirusTotal flagged it as malicious **only because it was tied to this phishing c
 
 ---
 
-## 📚 Lessons Learned
+## Lessons Learned
 - **What worked well:** Header analysis, URL tracing, and static file inspection  
 - **Challenges faced:** Identifying the embedded Base64 PNG image as the main malicious link  
 - **Skills improved:** Email header forensics, IOC extraction, and phishing campaign investigation  
