@@ -78,10 +78,18 @@ Example:
  
    This still doesn't prove the email is a legit one as previous signs have indicated the email address was indeed spoofed, but to confirm this I had to look at the Authenticated-Results header for email authentication protocols like SPF, DKIM, and DMARC.
 
-The Authentication-Results showed SPF was absent in the DNS record of att[.]net, which meant we wouldn't be able to confirm if the server that sent the mail was an authorized sending server or not. DkIM showed Ignore which meant the receiving server didn't trust the Public key used by the domain ( heritagejewelryandloan[.]com ) for encryption, so it ignored the DKIM check altogether. Finally, DMARC also showed none which meant the domain (att[.]net ) didn't have a DMARC policy set up in their DNS record. 
+The Authentication-Results showed SPF was absent in the DNS record of att[.]net, which meant we wouldn't be able to confirm if the server that sent the mail was an authorized sending server or not.
+
+DkIM showed Ignore which meant the receiving server didn't trust the Public key used by the domain ( heritagejewelryandloan[.]com ) for encryption, so it ignored the DKIM check altogether. Finally, DMARC also showed none which meant the domain (att[.]net ) didn't have a DMARC policy set up in their DNS record. 
  <p align="center">
   <img src="./Images/Phishing sample 5.jpg" alt="Email Header Screenshot" width="80%">
   </p>
+
+  The next step was to check the MX record of att[.]net for servers authorised to receive mails on behalf of the domain. I did the mx lookup and it confirmed the server that sent the mail isn't authorized to receive or send mails on behlaf of the att.net domain. 
+  <p align="center">
+  <img src="./Images/Phishing sample 25.jpg" alt="Email Header Screenshot" width="80%">
+  </p>
+  
 Normally, This email ought to go straight into the recepient's inbox due to absence of DMARC policy but the email security solution does its own DMARC alignment check and flagged the email as suspicious.
   <p align="center">
   <img src="./Images/Phishing sample 17.jpg" alt="Email Header Screenshot" width="80%">
