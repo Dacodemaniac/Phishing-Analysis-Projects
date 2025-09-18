@@ -17,8 +17,6 @@ and screenshots that document the investigation process.
 
 - **Phishing Analysis 1 - [Credential Havesting](https://github.com/Dacodemaniac/Phishing-Analysis-Projects/tree/main/Phishing%20Analysis%201%20-%20%5BCredential%20Havesting%5D)**  
   A threat actor impersonated Binance and attempted credential harvesting from users.
-- **Project 2 – [Credential Harvesting Attempt](./project-2/README.md)**  
-  Base64 image link decoding, URL redirection chain, and payload analysis.
 
 - *(More projects coming soon!)*
 
