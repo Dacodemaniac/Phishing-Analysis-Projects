@@ -15,7 +15,7 @@ and screenshots that document the investigation process.
 
 ## 📂 Repository Structure
 
-- **Project 1 – [Suspicious Invoice Campaign](./project-1/README.md)**  
+- **Phishing Analysis 1 - [Credential Havesting](./https://github.com/Dacodemaniac/Phishing-Analysis-Projects/tree/main)**  
   Header analysis, return-path investigation, IOC extraction, and remediation steps.
 
 - **Project 2 – [Credential Harvesting Attempt](./project-2/README.md)**  
