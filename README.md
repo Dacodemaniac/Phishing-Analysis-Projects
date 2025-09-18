@@ -15,7 +15,7 @@ and screenshots that document the investigation process.
 
 ## 📂 Repository Structure
 
-- **Phishing Analysis 1 - [Credential Havesting](./https://github.com/Dacodemaniac/Phishing-Analysis-Projects/tree/main)**  
+- **Phishing Analysis 1 - [Credential Havesting](https://github.com/Dacodemaniac/Phishing-Analysis-Projects/tree/main/Phishing%20Analysis%201%20-%20%5BCredential%20Havesting%5D)**  
   Header analysis, return-path investigation, IOC extraction, and remediation steps.
 
 - **Project 2 – [Credential Harvesting Attempt](./project-2/README.md)**  
