@@ -1,4 +1,4 @@
-# 📧 Project Title – [Short Description]
+# Phishing Analysis 1 – [Credential Harvesting]
 
 ## 📌 Overview
 This email was obtained from the Phishing_Pot Repository on Github (sample 1005).
@@ -11,23 +11,24 @@ This phishing campaign began Sun, 23 Jul 2023 07:04:11 +0300.
 
 ---
 
-## 📨 Email Details
+##  Email Details
 | Field           | Value |
 |----------------|-------|
-| **From**       | attacker@example.com |
-| **Return-Path**| mail@attacker-domain.com |
-| **Reply-To**   | attacker-reply@gmail.com |
-| **Subject**    | "Invoice Payment Required" |
+| **From**       | "Mary" <noreply@att[.]net> |
+| **Message-ID** | BCAAD0A3[.]7732363@att[.]net |
+| **Return-Path**| noreply@att[.]net |
+| **Recepient**  | ruben@ruben[.]org, phishing@pot, collin@colony[.]io,chris.pierce360@gmail[.]com, |
+| **Reply-To**   | noreply@att[.]net |
+| **Subject**    | #CRYPTO# |
 | **Attachment** | none |
-| **Links**      | suspicious-link.com |
+| **URL**        | Redacted |
+| **Date**      | Sun, 23 Jul 2023 07:04:11 +0300 |
 
-*(Redact or anonymize sensitive victim data.)*
 
 ---
 
-## 🛠️ Thought Process
-Explain **how you approached the analysis** step by step, and why.  
-Example:
+## MY Thought Process  
+
 - **Step 1:** I opened the email with outlook as the MUA and checked the body of the email. I did this to get the context of the whole attack and also know how to begin my investigation. It was obvious at first glance that the email is indeed a malicious one since the attacker who masqueraded as Mary (an employee at att.net)  was the sender on behalf of Binance. This seemed suspicious.
   <p align="center">
   <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
@@ -95,9 +96,7 @@ Normally, This email ought to go straight into the recepient's inbox due to abse
   <img src="./Images/Phishing sample 17.jpg" alt="Email Header Screenshot" width="80%">
   </p>
 - **Step 4:** Finally since there are no attachments, I got the encoded body data of the email and decoded it using Cyberchef. It happened to be a PNG imaged encoded in base 64 and embedded as the link. This one really took me a while to figure out and my best guess is the attacker did this to bypass filters.
- <p align="center">
-  <img src="./Images/Phishing sample 19.jpg" alt="Email Header Screenshot" width="80%">
-  </p>
+
    <p align="center">
   <img src="./Images/Phishing sample 9.jpg" alt="Email Header Screenshot" width="80%">
   </p>
@@ -126,40 +125,28 @@ Normally, This email ought to go straight into the recepient's inbox due to abse
   </p>
  Although, a vendor flagged the file as malicious in VirusTotal, this because it is associated with the phishing campaign. My static analysis showed this file is truly a PNG file without any malicious capability or alternate data stream.
 
-You can also embed small screenshots inline with explanations.
-
 ---
 
-## 🔎 Analysis Process (Technical Findings)
-Present your actual findings here:
-- Show screenshots of headers, decoded URLs, phishing landing page.
-- Explain what you observed in each step.
-
-<p align="center">
-  <img src="./Images/Phishing sample 1.jpg" alt="Email Header Screenshot" width="80%">
-</p>
-
----
-
-## 🧩 Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 | Type     | IOC |
 |---------|-----|
-| URL     | http://phishy-link.com/login |
-| IP      | 123.45.67.89 |
-| Domain  | phishy-link.com |
-| Hash    | `e99a18c428cb38d5f260853678922e03` |
+| URL     | Redacted |
+| IP      |  192[.]232[.]233[.]127, 92[.]38[.]131[.]25 |
+| Domain  |  heritagejewelryandloan[.]com |
+| MD5 Hash| 8D934BBF6A45A3631AE7CB9829DB4EF7 |
 
 ---
 
-## 🛡️ Mitigation & Recommendations
+##  Mitigation & Recommendations
+- Ensure authentication protocols like SPF, DKIM, and DMARC are properly setup for the domain.
 - Block the sender domain and IP at the email gateway.
 - Add the malicious URL to the web proxy blocklist.
-- Educate users about invoice-themed phishing campaigns.
+- Educate or train users about  phishing campaigns.
 
 ---
 
-## 📚 Lessons Learned
-Reflect on what you gained from this analysis:
+##  Lessons Learned
 - What worked well?
 - What challenges you faced?
 - What skills you improved (header analysis, URL decoding, IOC reporting)?
+- This analysis improved my skills as regarding email forensics and it also made me understand phishing more better. Until now, I haven't come across an embedded IMG file encoded in base 64 as the main link for a URL. 
