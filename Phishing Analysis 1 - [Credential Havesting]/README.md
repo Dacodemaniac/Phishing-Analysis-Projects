@@ -27,7 +27,7 @@ This use of **urgency** is a classic social engineering tactic.
   <img src="./Images/Phishing sample 2.jpg" alt="Social Engineering Example" width="80%">
 </p>
 
-There were no attachments, but hovering over the main image revealed it was embedded with a **malicious link** — another red flag.  
+There were no attachments, but hovering over the main image revealed it was embedded with a **malicious link**, another red flag.  
 
 ---
 
